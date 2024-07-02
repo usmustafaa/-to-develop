@@ -12,10 +12,21 @@
 <body class="bg-gray-100">
 
 <header class="h-16 w-full bg-white p-5 flex justify-between items-center">
-        <a href="logout.php"> <button class="p-3 bg-gray-400 hover:bg-gray-600 transition-all duration-100 font-semibold text-md h-12 rounded-sm text-white">Çıkış Yap</button></a>
+ 
+    <button  class="p-2 h-12 text-xl bg-gray-400 hover:bg-gray-600 transition-all duration-100 font-semibold text-md rounded-sm text-white">Farklı işlemler</button>
+    <button onclick="openMenu()" id="menu-btn" class="flex flex-col items-center justify-center p-1 w-12 h-12 text-xl bg-gray-400 hover:bg-gray-600 transition-all duration-100 font-semibold text-md rounded-sm text-white">
+        <div id="line1" class="line w-8 rounded-md h-1 bg-white mb-1"></div>
+        <div id="line2" class="line w-8 rounded-md h-1 bg-white mb-1"></div>
+        <div id="line3" class="line w-8 rounded-md h-1 bg-white "></div>
+    </button>
 </header>
 
-
+<div id="menu" class="-right-100 absolute w-80 h-96 bg-white bg-opacity-70  transition-all duration-300 z-50 flex flex-col justify-center items-center space-y-10 ">
+    <button class="p-2 h-12 w-52 text-xl text-white bg-blue-400 rounded-sm hover:bg-gray-600 transition-all duration-100">Hesabım</button>
+    <button class="p-2 h-12 w-52 text-xl text-white bg-blue-400 rounded-sm hover:bg-gray-600 transition-all duration-100">Kullanıcı Ekle</button>
+    <a href="logout.php"> <button class="p-2 h-12 w-52 text-xl text-white bg-blue-400 rounded-sm hover:bg-gray-600 transition-all duration-100">Çıkış Yap</button></a>
+  </div>
+  <div id="opc-menu" onclick="closeMenu()" class="absolute z-40 bg-black w-full h-full opacity-5 hidden"></div>
 
 
 <div class="flex justify-center mt-5">
